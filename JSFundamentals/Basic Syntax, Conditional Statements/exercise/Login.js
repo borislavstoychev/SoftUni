@@ -1,7 +1,7 @@
 function solve(arr) {
     const user = arr.shift()
     const pass = user.split("").reverse().join("")
-    console.log(pass)
+    // console.log(pass)
     let tries = 0
 
     for (const e of arr) {
