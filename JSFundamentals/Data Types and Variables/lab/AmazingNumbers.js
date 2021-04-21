@@ -1,5 +1,4 @@
 function amazingNumber(num) {
-    // num = num.toString();
     let sum = 0;
     for (const e of num.toString()) {
         sum += Number(e);
