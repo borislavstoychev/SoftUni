@@ -1,4 +1,4 @@
-function spice(n) {
+function spiceMustFlow(n) {
     let spice = 0;
     let days = 0;
 
@@ -17,4 +17,4 @@ function spice(n) {
 ${isEnoughSpice() ? spice - 26 : 0}`);
 }
 
-spice(111)
+spiceMustFlow(111)
