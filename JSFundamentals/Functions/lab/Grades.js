@@ -1,7 +1,7 @@
 function grade(num) {
     switch (true) {
         case (num < 3):
-            return `Fail (${num.toFixed(2)})`;
+            return `Fail (2)`;
         case  (num < 3.50):
             return `Poor (${num.toFixed(2)})`;
         case  (num < 4.50):
