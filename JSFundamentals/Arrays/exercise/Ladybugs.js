@@ -31,15 +31,15 @@ function ladybugs(arr) {
     for (const commands of arr) {
         let [indexStart, direction, indexEnd] = commands.split(" ");
         indexStart = Number(indexStart);
-        indexEnd = Number(indexEnd)
+        indexEnd = Number(indexEnd);
         if (field[indexStart] !== 0 && field[indexStart] !== undefined) {
             field[indexStart] = 0;
-            direction == "left" ? (field = moveLeft(field, (indexStart - indexEnd))) : (field = moveRight(field, (indexStart + indexEnd)))
-        
-        }
-        
-        }
-        console.log(field.join(" "));
+            direction == "left" 
+            ? (field = moveLeft(field, (indexStart - indexEnd))) 
+            : (field = moveRight(field, (indexStart + indexEnd)))
+        } 
+    }
+    console.log(field.join(" "));
 }
     
 
