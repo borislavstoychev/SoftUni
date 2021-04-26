@@ -7,9 +7,8 @@ function simpleCalculator(numOne, numTwo, operator) {
         "subtract": numOne - numTwo
     }
     return calculator[operator]
-
-   
 }
+
 const print = function(n, n1, op) {
     console.log(simpleCalculator(n, n1, op));
 }
