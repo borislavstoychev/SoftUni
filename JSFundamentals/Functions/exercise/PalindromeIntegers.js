@@ -4,7 +4,7 @@ function palindrome(arr) {
         .toString()
         .split("")
         .reverse()
-        .join(""))
+        .join(""));
         num === palindromNum
         ? console.log("true") 
         : console.log ("false")
