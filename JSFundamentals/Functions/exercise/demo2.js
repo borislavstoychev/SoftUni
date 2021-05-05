@@ -23,7 +23,6 @@ function solve(speed, area) {
                 status = 'reckless driving'
                 break;
         }
-
         console.log(`The speed is ${overLimit} km/h faster than the allowed speed of ${areaLimits[area]} - ${status}`);
     } else {
 
