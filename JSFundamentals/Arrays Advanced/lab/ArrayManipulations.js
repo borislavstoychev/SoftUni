@@ -12,14 +12,10 @@ function arrManipulations(args) {
                 myArr.push(firstN);
                 break;
             case "Remove":
-                for (let i = 0; i < myArr.length; i++) {
-                    if (myArr[i] === firstN) {
-                        myArr.splice(i, 1)
-                    }
-                }
+                myArr = myArr.filter(a => a !== firstN)
                 break;
             case "RemoveAt":
-                myArr.splice(firstN, 1)
+                myArr.splice(firstN, 1);
                 break;
             case "Insert":
                 myArr.splice(secondN, 0, firstN);
