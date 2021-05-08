@@ -1,5 +1,5 @@
 function firstLast(arr) {
-    arr = arr.map(parseInt)
+    arr = arr.map(Number)
     return arr[0] + arr[arr.length - 1]
 }
 
