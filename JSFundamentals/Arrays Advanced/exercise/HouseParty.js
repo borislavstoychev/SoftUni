@@ -1,15 +1,15 @@
 function houseParty(arr) {
-    let party = []
+    let party = [];
     while (arr.length) {
         let action = arr
         .shift()
-        .split(" ")
-        let name = action.shift()
+        .split(" ");
+        let name = action.shift();
         action.includes("not") 
         ? party.includes(name) ? party.splice(party.indexOf(name), 1) : console.log(`${name} is not in the list!`) 
-        : party.includes(name) ? console.log(`${name} is already in the list!`) : party.push(name)
+        : party.includes(name) ? console.log(`${name} is already in the list!`) : party.push(name);
     }
-    console.log(party.join("\n"))
+    console.log(party.join("\n"));
 }
 
 houseParty(['Allie is going!',
