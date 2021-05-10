@@ -1,14 +1,14 @@
-// function distinctArray(arr) {
-//     return arr
-//     .filter((element,index) => arr.indexOf(element) == index)
-//     .join(" ");
-// }
+function distinctArray(arr) {
+    return arr
+    .filter((element,index) => arr.indexOf(element) == index)
+    .join(" ");
+}
 
 function distinctArray(arr) {
     return arr
     .reduce((unique, item) => 
         unique.includes(item) ? unique : [...unique, item], [])
-    .join(" ")
+    .join(" ");
 }
 
 console.log(distinctArray([1, 2, 3, 4, 1, 1]));
