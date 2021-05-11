@@ -8,7 +8,10 @@ function gladiatorInventory(arr) {
     };
 
     function buy(eq) {
-        inventory.push(eq);
+        if (!inventory.includes(eq)) {
+            inventory.push(eq);
+        }
+        
     }
 
     function trash(eq) {
