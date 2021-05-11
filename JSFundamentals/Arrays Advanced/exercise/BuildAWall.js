@@ -1,6 +1,6 @@
 function foo(arr) {
     let days = [];
-    let index = arr.sort((a,b) => a-b)[0]
+    let index = arr.sort((a,b) => a-b)[0];
 
     for (let i = index; i < 30; i++) {
         let count = 0;
