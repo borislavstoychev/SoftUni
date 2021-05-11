@@ -1,12 +1,11 @@
 function bombNums(arr1, arr2) {
     let [bomb, power] = arr2
-    for (let i = 0; i < arr1.length; i++) {
-        if (arr1[i] === bomb) {
-            arr1.splice(i - power > 0 ? i - power : 0, power * 2 + 1);
-            i = 0;
+    arr1.forEach((element,i) => {
+        if (element==bomb) {
+            arr1.splice(i - power > 0 ? i - power : 0, power * 2 + 1)
+            i = 0
         }
-    }
-
+    });
     return arr1.reduce((a, v) => a + v, 0);
 }
 
