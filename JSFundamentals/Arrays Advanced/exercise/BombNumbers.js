@@ -1,5 +1,5 @@
 function bombNums(arr1, arr2) {
-    let [bomb, power] = [arr2[0], arr2[1]]
+    let [bomb, power] = arr2
     for (let i = 0; i < arr1.length; i++) {
         if (arr1[i] === bomb) {
             arr1.splice(i - power > 0 ? i - power : 0, power * 2 + 1);
