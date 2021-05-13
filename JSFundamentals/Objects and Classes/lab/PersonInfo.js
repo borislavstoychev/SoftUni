@@ -3,7 +3,7 @@ function personInfo(firstName, lastName, age) {
         firstName,
         lastName,
         age
-    }
+    };
 }
 
 console.log(personInfo("Peter", 
