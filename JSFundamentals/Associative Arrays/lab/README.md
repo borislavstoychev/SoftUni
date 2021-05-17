@@ -87,7 +87,7 @@ Write a function that receives list of neighborhoods and then some people, who a
 Input | Output
 ------| ------
 ['Abbey Street, Herald Street, Bright Mews',<br>'Bright Mews - Garry',<br>'Bright Mews - Andrea',<br>'Invalid Street - Tommy',<br>'Abbey Street - Billy'] | Bright Mews: 2<br>--Garry<br>--Andrea<br>Abbey Street: 1<br>--Billy<br>Herald Street: 0
-#### vHints
+#### Hints
     • Save the first element of the array as the neighborhoods
     • Fill the map with them and set their values as empty arrays
     • Loop through the rest of the elements
