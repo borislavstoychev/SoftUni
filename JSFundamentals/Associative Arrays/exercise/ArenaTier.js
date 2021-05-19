@@ -53,7 +53,7 @@ function arenaTier(arr) {
         element[1] = Object.entries(element[1])
         .sort((a,b) => b[1] - a[1] !== 0 ? b[1] - a[1] : sortByName(a[0], b[0]));
         players[element[0]] = element[1]
-    })
+    });
     Object.entries(players)
     .forEach(element => {
         console.log(`${element[0]}: ${sumSkills(element[1])} skill${printTechnique(element[1])}`)
