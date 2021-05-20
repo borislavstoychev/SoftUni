@@ -149,6 +149,6 @@ Shards, Fragments and Motes are the key materials, all else is junk. You will be
 Input | Output
 ------| ------
 '3 Motes 5 stones 5 Shards 6 leathers 255 fragments 7 Shards' | Valanyr obtained!<br>fragments: 5<br>shards: 5<br>motes: 3<br>leathers: 6<br>stones: 5
-'123 silver 6 shards 8 shards 5 motes 9 fangs 75 motes 103 MOTES 8 Shards 86 Motes 7 stones 19 silver' | Dragonwrath obtained!<br>shards: 22vmotes: 19<br>fragments: 0<br>fangs: 9<br>silver: 123
+'123 silver 6 shards 8 shards 5 motes 9 fangs 75 motes 103 MOTES 8 Shards 86 Motes 7 stones 19 silver' | Dragonwrath obtained!<br>shards: 22<br>vmotes: 19<br>fragments: 0<br>fangs: 9<br>silver: 123
 
 
