@@ -14,7 +14,7 @@ function legendaryFarming(str) {
             if (legendaryItems.hasOwnProperty(material)){
                 if (materials[material] >= 250){
                     materials[material] -= 250;
-                    console.log(`${legendaryItems[material]} obtained!`)
+                    console.log(`${legendaryItems[material]} obtained!`);
                     break;
                 }
             }
@@ -28,13 +28,13 @@ function legendaryFarming(str) {
     Object.entries(specialMaterial)
     .sort((a,b) => b[1] - a[1] !== 0 ? b[1] - a[1] : a[0].localeCompare(b[0]))
     .forEach(element => {
-        console.log(`${element[0]}: ${element[1]}`)
+        console.log(`${element[0]}: ${element[1]}`);
     });
 
     let junked = {};
     for (let key in materials) {
         if (!legendaryItems.hasOwnProperty(key)) {
-            junked[key] = materials[key]
+            junked[key] = materials[key];
         }
     }
     Object.entries(junked)
