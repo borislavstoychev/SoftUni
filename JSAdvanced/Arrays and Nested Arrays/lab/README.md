@@ -22,6 +22,7 @@ Input | Output
 ------| ------
 6, 3 | [1, 1, 2, 4, 7, 13]
 8, 2 | [1, 1, 2, 3, 5, 8, 13, 21]
+
 ***Explanation***
 The 2nd element (1) is the sum of the 3 elements before it, but there is only 1, so we take that. The third element is the sum of the first 2 (1 and 1) and the 4th – the sum of 1, 1 and 2. The 5th element is the sum of the 2nd, 3rd and 4th (1, 2 and 4) and so on.
 ##    3. Sum First Last
