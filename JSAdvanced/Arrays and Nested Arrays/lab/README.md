@@ -22,6 +22,7 @@ Input | Output
 ------| ------
 6, 3 | [1, 1, 2, 4, 7, 13]
 8, 2 | [1, 1, 2, 3, 5, 8, 13, 21]
+
 ***Explanation***
 The 2nd element (1) is the sum of the 3 elements before it, but there is only 1, so we take that. The third element is the sum of the first 2 (1 and 1) and the 4th – the sum of 1, 1 and 2. The 5th element is the sum of the 2nd, 3rd and 4th (1, 2 and 4) and so on.
 ##    3. Sum First Last - []
@@ -44,6 +45,7 @@ Input | Output
 ------| ------
 [7, -2, 8, 9] | -2<br>7<br>8<br>9
 [3, -2, 0, -1] | -1<br>-2<br>3<br>0
+
 ***Hints***
     • Write a function that receives an array as an argument.
     • Declare variable named result that will keep the array.
@@ -60,6 +62,7 @@ The output is printed on the console on a single line, separated by space.
 ### Example
 
 Input | Output
+------| ------
 [30, 15, 50, 5] | 5 15
 [3, 0, 10, 4, 7, 3] | 0 3
 ##    6. Bigger Half
