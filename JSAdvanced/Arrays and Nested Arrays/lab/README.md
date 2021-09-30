@@ -1,7 +1,7 @@
 # Lab: Arrays
 Problems for in-class lab for the "JavaScript Advanced" course @ SoftUni. Submit your solutions in the SoftUni judge system at [juddge](https://judge.softuni.bg/Contests/2752/Arrays-and-Nested-Arrays-Lab).
 ## Arrays
-##    1. Even Position Element
+##    1. Even Position Element -[Solution](https://github.com/borislavstoychev/SoftUni/blob/main/JSAdvanced/Arrays%20and%20Nested%20Arrays/lab/EvenPositionElement.js)
 Write a function that finds the elements at even positions in an array.
 The input comes as an array of string elements.
 The output is printed on the console. Collect all elements in a string, separated by space.
@@ -10,7 +10,7 @@ Input | Output
 ------| ------
 ['20', '30', '40', '50', '60'] | 20 40 60
 ['5', '10'] | 5
-##    2. Last K Numbers Sequence
+##    2. Last K Numbers Sequence - [Solution](https://github.com/borislavstoychev/SoftUni/blob/main/JSAdvanced/Arrays%20and%20Nested%20Arrays/lab/LastKNumbersSequence.js)
 ### You are given two integers n and k. Write a JS function that generates and return the following sequence:
     • The first element is 1
     • Every following element equals the sum of the previous k elements
@@ -24,7 +24,7 @@ Input | Output
 8, 2 | [1, 1, 2, 3, 5, 8, 13, 21]
 ***Explanation***
 The 2nd element (1) is the sum of the 3 elements before it, but there is only 1, so we take that. The third element is the sum of the first 2 (1 and 1) and the 4th – the sum of 1, 1 and 2. The 5th element is the sum of the 2nd, 3rd and 4th (1, 2 and 4) and so on.
-##    3. Sum First Last
+##    3. Sum First Last - []
 Write a function that calculates and return the sum of the first and the last elements in an array.
 The input comes as an array of string elements holding numbers.
 The output is the return value of your function and should be a number.
