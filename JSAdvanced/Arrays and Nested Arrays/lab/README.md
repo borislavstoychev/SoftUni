@@ -45,6 +45,7 @@ Input | Output
 ------| ------
 [7, -2, 8, 9] | -2<br>7<br>8<br>9
 [3, -2, 0, -1] | -1<br>-2<br>3<br>0
+
 ***Hints***
     • Write a function that receives an array as an argument.
     • Declare variable named result that will keep the array.
