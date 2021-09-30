@@ -62,6 +62,7 @@ The output is printed on the console on a single line, separated by space.
 ### Example
 
 Input | Output
+------| ------
 [30, 15, 50, 5] | 5 15
 [3, 0, 10, 4, 7, 3] | 0 3
 ##    6. Bigger Half
