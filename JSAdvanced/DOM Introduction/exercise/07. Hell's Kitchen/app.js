@@ -7,16 +7,16 @@ function solve() {
       let staffSalary = {}
       let text = document.querySelector('textarea').value
       for (el of JSON.parse(text)){
-         let [restorant,data] = el.split(" - ")
+         let [name,data] = el.split(" - ")
          data = data.split(", ")
-         if (!restorantStaff[restorant]){
-            restorantStaff[restorant] = []
-            staffSalary[restorant] = {}
+         if (!restorantStaff[name]){
+            restorantStaff[name] = []
+            staffSalary[name] = {}
          }
          for (let p of data){
             let[person, salary] = p.split(' ')
-            restorantStaff[restorant].push({'person': person}, {'salary': salary})
-            staffSalary[restorant][person] = Number(salary)
+            restorantStaff[name].push({'person': person}, {'salary': salary})
+            staffSalary[name][person] = Number(salary)
          };
 
       }
