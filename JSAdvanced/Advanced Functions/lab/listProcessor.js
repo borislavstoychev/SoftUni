@@ -1,18 +1,19 @@
 function solve(input) {
-    const listCreator = () => {
-        let list = [];
-        return {
-            add: (el) => list.push(el),
-            remove: (el) => list = list.filter((x) => x !== el),
+    let list = [];
+    const listCreator = (cmd, el) => {
+        let result = {
+            add: () => list.push(el),
+            remove: () => list = list.filter((x) => x !== el),
             print: () => console.log(list.join(',')),
-        };
+
+        }
+        result[cmd]()
+        return list
     };
-    const listHandler = listCreator();
     input
         .map((x) => x.split(' '))
-        .map(([cmd, text]) => listHandler[cmd](text));
+        .map(([cmd, text]) => listCreator(cmd, text));
 }
 
 solve(["add hello", "add again", "remove hello", "add again", "print"]);
-solve(['add pesho', 'add george', 'add peter', 'remove peter','print']
-)
+solve(['add pesho', 'add george', 'add peter', 'remove peter','print'])
