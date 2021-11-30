@@ -1,32 +1,40 @@
 function result() {
-    class Keyboard{
+    class Manufacturer{
+        constructor(manufacturer){
+            if (new.target === Manufacturer) {
+                throw new Error('Cannot instantiate directly ABS class.');
+            }
+            this.manufacturer = manufacturer
+        }
+    }
+    class Keyboard extends Manufacturer{
         constructor(manufacturer, responseTime){
-            this.manufacturer = manufacturer;
+            super(manufacturer)
             this.responseTime = responseTime;
         };
     };
-    class Monitor{
+    class Monitor extends Manufacturer{
         constructor(manufacturer, width, height){
+            super(manufacturer)
             Object.assign(this, {
-                manufacturer,
                 width,
                 height,
             });
         };
     };
-    class Battery{
+    class Battery extends Manufacturer{
         constructor(manufacturer, expectedLife){
-            this.manufacturer = manufacturer;
+            super(manufacturer);
             this.expectedLife = expectedLife;
         };
     };
-    class Computer{
+    class Computer extends Manufacturer{
         constructor(manufacturer, processorSpeed, ram, hardDiskSpace){
             if (new.target === Computer) {
                 throw new Error('Cannot instantiate directly ABS class.');
             }
+            super(manufacturer);
             Object.assign(this, {
-                manufacturer,
                 processorSpeed,
                 ram,
                 hardDiskSpace,
