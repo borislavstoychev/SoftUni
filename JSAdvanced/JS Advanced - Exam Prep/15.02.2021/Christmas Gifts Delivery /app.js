@@ -6,7 +6,7 @@ function solution() {
     let inputAdd = document.querySelector('input')
     
     buttonAdd .addEventListener('click', ()=>{
-        createLi(inputAdd.value);
+        createGiftList(inputAdd.value);
         sortLi();
         inputAdd.value = "";
     });
@@ -20,7 +20,7 @@ function solution() {
     // discard gift section
     let ulDiscard = sections[3].children[1];
 
-    function createLi(content){
+    function createGiftList(content){
         //create li and buttons
         let li = document.createElement('li');
         li.classList.add('gift')
