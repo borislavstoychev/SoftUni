@@ -37,9 +37,4 @@ let dealership = {
         }
 }
 
-
-let extrasArr = ['heated seats', 'sliding roof', 'sport rims', 'navigation'];
-let  indexArr = [0, 2, 3]
-console.log(dealership.carEquipment(extrasArr,  indexArr))
-
 module.exports = dealership;

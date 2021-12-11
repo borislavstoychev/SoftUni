@@ -13,7 +13,7 @@ describe("dealership", function() {
             let oldCarModel = 'Audi A3 B7'
             let  newCarPrice = 25000
             expect(dealership.newCarCost(oldCarModel, newCarPrice)).to.equal(25000)
-        })
+        });
      });
 
      describe("test carEquipment", function() {
@@ -35,9 +35,6 @@ describe("dealership", function() {
         it('should return expected message for less then 4 category', function(){
             let expectedResuld = 'Your euro category is low, so there is no discount from the final price!'
             expect(dealership.euroCategory(3)).to.equal(expectedResuld)
-        })
+        });
      });
-
-
-
 });
