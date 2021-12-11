@@ -1,7 +1,7 @@
 let dealership = require('../dealership');
 let {assert, expect} = require('chai');
 
-describe("dealership", function() {
+describe("dealership tests", function() {
     describe("test newCarCost", function() {
 
         it("should return final price, recived discoun from old car ", function() {
@@ -21,14 +21,13 @@ describe("dealership", function() {
         it("should return list with selected extras", function() {
             let extrasArr = ['heated seats', 'sliding roof', 'sport rims', 'navigation'];
             let  indexArr = [0, 2, 3]
-            console.log(dealership.carEquipment(extrasArr,  indexArr))
             expect(dealership.carEquipment(extrasArr,  indexArr)).to.eql(['heated seats', 'sport rims', 'navigation'])
         });
      });
 
      describe("test euroCategory", function() {
 
-        it("should return 5% discount the category is bigger or equal to 4", function() {
+        it("should return 5% discount when category is bigger or equal to 4", function() {
             let expectedResuld = `We have added 5% discount to the final price: 14250.`
             expect(dealership.euroCategory(4)).to.equal(expectedResuld)
         });
