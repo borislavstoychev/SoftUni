@@ -1,6 +1,6 @@
-
 const nav = document.querySelector('nav');
 const a = nav.querySelector('a.nav-link');
+
 export function setUserNav() {
     if (sessionStorage.getItem('auth_token') != null) {
         [...document.getElementsByClassName('user')].forEach(el=>{

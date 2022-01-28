@@ -1,49 +1,43 @@
-import { showHome } from './home.js';
+import { showHome } from '../movieApp/home.js';
 
 
 let main;
 let section;
+
 const nav = document.querySelector('nav');
 const a = nav.querySelector('a.nav-link');
-
-export function setupRegister(targetMain, targetSection, ) {
+export function setupLogin(targetMain, targetSection){
     main = targetMain;
     section = targetSection;
 
-    const form = section.querySelector('form')
+    const form = section.querySelector('form');
     form.addEventListener('submit', (ev => {
         ev.preventDefault();
         const formData = new FormData(ev.target);
-        ev.currentTarget.reset();
-        register(formData);
+        form.reset();
+        login(formData);
     }));
 
-    function register(data) {
-        if (data.get('password') != data.get('repeatPassword')) {
-            return alert('Passwords don\'t match');
-        }
-
+    function login(data) {
         const body = JSON.stringify({
             email: data.get('email'),
-            password: data.get('password'),
+            password: data.get('password')
         });
-
-        fetch('http://localhost:3030/users/register', {
-                method: 'post',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body
-            })
-        .then(response =>{
-            if (response.status !== 200) {
-                throw new Error('Username already exist');
-            
+        fetch('http://localhost:3030/users/login', {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body
+        })
+        .then(response => {
+            if (response.status === 403){
+                throw new Error('Incorect username or passowrd!');
             }
             return response.json()
         })
         .then(data => {
-            sessionStorage.setItem('authToken', data.accessToken);
+            sessionStorage.setItem('auth_token', data.accessToken);
             sessionStorage.setItem('userId', data._id);
             sessionStorage.setItem('email', data.email);
             [...document.getElementsByClassName('user')].forEach(el=>{
@@ -54,16 +48,16 @@ export function setupRegister(targetMain, targetSection, ) {
             });
             a.textContent = `Welcome, ${sessionStorage.getItem('email')}`
 
-            showHome()                      
+            showHome()          
         })
-        .catch (err => {
-            alert(err.message);
+        .catch(er => {
+            alert(er.message)
         })
+        
     }
 }
 
-
-export function showRegister() {
+export function showLogin() {
     main.textContent = '';
     main.appendChild(section);
 }

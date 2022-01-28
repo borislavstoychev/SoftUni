@@ -1,38 +1,44 @@
-import { showHome } from './home.js';
-// import { showMovies } from './movies.js';
+import { showHome } from "../movieApp/home.js";
+
 
 let main;
 let section;
-
 const nav = document.querySelector('nav');
 const a = nav.querySelector('a.nav-link');
-export function setupLogin(targetMain, targetSection){
+
+export function setupRegister(targetMain, targetSection, ) {
     main = targetMain;
     section = targetSection;
 
-    const form = section.querySelector('form');
+    const form = section.querySelector('form')
     form.addEventListener('submit', (ev => {
         ev.preventDefault();
         const formData = new FormData(ev.target);
-        form.reset();
-        login(formData);
+        ev.currentTarget.reset();
+        register(formData);
     }));
 
-    function login(data) {
+    function register(data) {
+        if (data.get('password') != data.get('repeatPassword')) {
+            return alert('Passwords don\'t match');
+        }
+
         const body = JSON.stringify({
             email: data.get('email'),
-            password: data.get('password')
+            password: data.get('password'),
         });
-        fetch('http://localhost:3030/users/login', {
-            method: 'post',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body
-        })
-        .then(response => {
-            if (response.status === 403){
-                throw new Error('Incorect username or passowrd!');
+
+        fetch('http://localhost:3030/users/register', {
+                method: 'post',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body
+            })
+        .then(response =>{
+            if (response.status !== 200) {
+                throw new Error('Username already exist');
+            
             }
             return response.json()
         })
@@ -48,16 +54,16 @@ export function setupLogin(targetMain, targetSection){
             });
             a.textContent = `Welcome, ${sessionStorage.getItem('email')}`
 
-            showHome()          
+            showHome()                      
         })
-        .catch(er => {
-            alert(er.message)
+        .catch (err => {
+            alert(err.message);
         })
-        
     }
 }
 
-export function showLogin() {
+
+export function showRegister() {
     main.textContent = '';
     main.appendChild(section);
 }

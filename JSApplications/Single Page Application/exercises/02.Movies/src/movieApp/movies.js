@@ -1,4 +1,4 @@
-import { e } from './dom.js';
+import { e } from '../helpers/dom.js';
 import { showDetails } from './details.js';
 
 async function getMovie() {

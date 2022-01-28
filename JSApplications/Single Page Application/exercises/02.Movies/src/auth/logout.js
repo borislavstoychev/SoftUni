@@ -1,5 +1,5 @@
-import { setUserNav } from "./navigation.js";
-import { showHome } from "./home.js";
+import { setUserNav } from "../helpers/navigation.js";
+import { showHome } from "../movieApp/home.js";
 
 export async function logout() {
     const response = await fetch('http://localhost:3030/users/logout', {
