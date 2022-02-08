@@ -120,4 +120,3 @@ async function deleteRecipeById(id) {
       alert(err.message);
   }
 }
-
