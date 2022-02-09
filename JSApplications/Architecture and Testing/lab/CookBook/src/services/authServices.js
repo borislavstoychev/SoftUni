@@ -45,7 +45,12 @@ export function login(data) {
       password: data.get('password')
   });
   post(endPoints.login, body)
-  .then(res=>res.json())
+  .then(res=>{
+      if (res.status == 403){
+          throw new Error("User not found!")
+      }
+      return res.json()
+  })
   .then(data => {
       sessionStorage.setItem('auth_token', data.accessToken);
       sessionStorage.setItem('userId', data._id);

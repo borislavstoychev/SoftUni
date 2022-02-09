@@ -3,12 +3,12 @@ const request = (method, url, data, token) => {
     method,
     headers: {}
   };
-  if (token){
-    options.headers['X-Authorization'] = token
-  }
   if (method == "POST" || method == "PUT"){
     options.headers['Content-Type'] = 'application/json'
     options.body = data;
+  }
+  if (token){
+    options.headers['X-Authorization'] = token
   }
   return fetch(url,options)
 }

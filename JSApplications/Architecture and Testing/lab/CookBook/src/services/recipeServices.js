@@ -4,7 +4,7 @@ import { showEdit } from "../pages/edit.js";
 import { del, post, put } from "./requester.js";
 
 
-const baseUrl = 'http://localhost:3030/data/recipes/';
+const baseUrl = 'http://localhost:3030/data/recipes';
 
 export function createRecipeCard(recipe) {
   const result = e('article', {},
@@ -89,7 +89,7 @@ export async function edit(data, recipeId) {
       return alert('You\'re not logged in!');
   }
   
-  put(baseUrl + recipeId, body, token)
+  put(`${baseUrl}/${recipeId}`, body, token)
   .then(response => {
       if (response.status == 200) {
           showDetails(recipeId)
@@ -108,7 +108,7 @@ async function deleteRecipeById(id) {
   const token = sessionStorage.getItem('auth_token');
 
   try {
-      const response = await del(baseUrl + id, null, token)
+      const response = await del(`${baseUrl}/${id}`, null, token)
       if (response.status != 200) {
           const error = await response.json();
           throw new Error(error.message);
